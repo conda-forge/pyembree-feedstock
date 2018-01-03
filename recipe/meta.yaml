@@ -1,8 +1,8 @@
 {% set name = "pyembree" %}
 {% set org = "scopatz" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 {% set branch = "0.1.0" %}
-{% set sha256 = "2f34c2807377bf8f24d26a4ca65bce00c25120188205e66438ee653a92db88d5" %}
+{% set sha256 = "630c02c5f083cc2dbd7de5d8471d90f1fea408d659dff43e94d2480940d7f44f" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win]
 
 requirements:
