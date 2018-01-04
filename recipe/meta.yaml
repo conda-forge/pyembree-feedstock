@@ -1,8 +1,7 @@
 {% set name = "pyembree" %}
 {% set org = "scopatz" %}
-{% set version = "0.1.0" %}
-{% set branch = "0.1.0" %}
-{% set sha256 = "2f34c2807377bf8f24d26a4ca65bce00c25120188205e66438ee653a92db88d5" %}
+{% set version = "0.1.2" %}
+{% set sha256 = "630c02c5f083cc2dbd7de5d8471d90f1fea408d659dff43e94d2480940d7f44f" %}
 
 package:
   name: {{ name|lower }}
@@ -10,23 +9,23 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}-{{ sha256 }}.tar.gz
-  url: https://github.com/{{ org }}/{{ name }}/archive/{{ branch }}.tar.gz
+  url: https://github.com/{{ org }}/{{ name }}/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win]
 
 requirements:
   build:
     - python
     - setuptools
-    - cython 0.25.2
-    - numpy 1.8.*
+    - cython >=0.25.2
+    - numpy 1.11.*
     - embree
   run:
     - python
-    - numpy >=1.8
+    - numpy >=1.11
     - embree
 
 test:
