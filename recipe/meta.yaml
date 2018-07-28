@@ -13,19 +13,22 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
     - setuptools
     - cython >=0.25.2
-    - numpy 1.11.*
+    - numpy
     - embree
   run:
     - python
-    - numpy >=1.11
+    - {{ pin_compatible('numpy') }}
     - embree
 
 test:
