@@ -1,7 +1,7 @@
 {% set name = "pyembree" %}
 {% set org = "scopatz" %}
-{% set version = "0.1.5" %}
-{% set sha256 = "b444ed7c9932a6b93d5f8febb0d4a4786c0c02c3f2f69cd9c0707a7aa12c2b22" %}
+{% set version = "0.1.6" %}
+{% set sha256 = "d16823a8886c9e8e8c451243460ccde7e659dac78e1ddfae7110895dae324777" %}
 
 package:
   name: {{ name|lower }}
