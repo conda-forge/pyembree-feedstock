@@ -41,7 +41,7 @@ test:
 
 about:
   home: https://github.com/scopatz/pyembree
-  license: BSD 2-clause
+  license: BSD 2-Clause
   license_file: LICENSE
   summary: 'Python Wrapper for Embree'
   dev_url: https://github.com/scopatz/pyembree
