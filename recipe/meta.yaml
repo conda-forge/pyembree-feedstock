@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win or armv6l or armv7l or ppc64le or aarch64]
 
 requirements:
@@ -36,8 +36,6 @@ test:
   imports:
     - pyembree
   commands:
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: https://github.com/scopatz/pyembree
