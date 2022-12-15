@@ -13,8 +13,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  skip: True  # [win or armv6l or armv7l or ppc64le]
+  number: 2
+  skip: True  # [win or armv6l or armv7l or ppc64le or aarch64]
 
 requirements:
   build:
@@ -22,8 +22,9 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
-    - setuptools
-    - cython >=0.25.2
+    - pip
+    - setuptools >=51.0.0
+    - cython >=0.29.24,<3
     - numpy
     - embree
   run:
@@ -40,7 +41,7 @@ test:
 
 about:
   home: https://github.com/scopatz/pyembree
-  license: BSD 2-clause
+  license: BSD 2-Clause
   license_file: LICENSE
   summary: 'Python Wrapper for Embree'
   dev_url: https://github.com/scopatz/pyembree
@@ -50,3 +51,4 @@ extra:
     - scopatz
     - Xarthisius
     - ocefpaf
+    - dsuess
