@@ -13,8 +13,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
-  skip: True  # [win or armv6l or armv7l or ppc64le or aarch64]
+  number: 5
+  skip: True  # [win or armv6l or armv7l or ppc64le or aarch64 or py==38]
 
 requirements:
   build:
