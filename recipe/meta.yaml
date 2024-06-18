@@ -13,7 +13,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 3
   skip: True  # [win or armv6l or armv7l or ppc64le or aarch64]
 
 requirements:
@@ -26,11 +26,11 @@ requirements:
     - setuptools >=51.0.0
     - cython >=0.29.24,<3
     - numpy
-    - embree >=2.17,<3
+    - embree
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - {{ pin_compatible('embree') }}
+    - embree
 
 test:
   imports:
