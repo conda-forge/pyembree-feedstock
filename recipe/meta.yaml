@@ -35,7 +35,10 @@ requirements:
 test:
   imports:
     - pyembree
+  source_files:
+    - tests/
   commands:
+    - python tests/test_intersection.py
 
 about:
   home: https://github.com/scopatz/pyembree
