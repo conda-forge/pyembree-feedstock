@@ -27,10 +27,10 @@ requirements:
     - setuptools >=51.0.0
     - cython >=0.29.24,<3
     - numpy
-    - embree
+    - embree >=2.17,<3
   run:
     - python
-    - embree
+    - {{ pin_compatible('embree') }}
 
 test:
   imports:
