@@ -13,12 +13,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win or armv6l or armv7l or ppc64le or aarch64]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
